@@ -4,7 +4,9 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-data = pd.read_csv("owid-covid-data.csv")
+#data = pd.read_csv("data/owid-covid-data.csv")
+
+data = pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
 
 options_death = st.multiselect('Quel pays pour une comparaison ?', data['location'].unique(),['France'])
 
